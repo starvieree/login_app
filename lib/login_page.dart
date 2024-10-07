@@ -10,26 +10,40 @@ class LoginPage extends StatelessWidget {
         title: const Text('Login'),
         backgroundColor: Colors.blueAccent,
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(16),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.person, size: 100, color: Colors.blueAccent,),
-            SizedBox(height: 20,),
-            TextField(
+            const Icon(Icons.person, size: 100, color: Colors.blueAccent,),
+            const SizedBox(height: 20,),
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder()
               ),
             ),
-            SizedBox(height: 20,),
-            TextField(
+            const SizedBox(height: 20,),
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Password',
                 border: OutlineInputBorder()
               ),
               obscureText: true,
+            ),
+            const SizedBox(height: 20,),
+            ElevatedButton(
+              onPressed: () => {
+
+              },
+              child: const Text('Login')
+            ),
+            const SizedBox(height: 20,),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/register');
+              },
+              child: const Text('Belum punya akun ? Daftar')
             )
           ],
         ),
