@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/register_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -41,10 +42,10 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 20,),
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/register');
+                Navigator.push((context), MaterialPageRoute(builder: (context) => const RegisterPage()));
               },
               child: const Text('Belum punya akun ? Daftar')
-            )
+            ),
           ],
         ),
       )

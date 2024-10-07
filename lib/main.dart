@@ -14,14 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Login Register',
-      theme: ThemeData(
-        primarySwatch: Colors.blue
-      ),
-      initialRoute: '/',
-      routes: {
-        '/' : (context) => const LoginPage(),
-        '/register' : (context) => const RegisterPage()
-      },
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue
+      // ),
+      home: const LoginPage(),
+      // initialRoute: '/',
+      // routes: {
+      //   '/' : (context) => const LoginPage(),
+      //   '/register' : (context) => const RegisterPage()
+      // },
     );
   }
 }
